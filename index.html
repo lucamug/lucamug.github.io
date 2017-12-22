@@ -13,9 +13,17 @@
         body {
             text-align: center;
             font-family: sans-serif;
-            margin: 200px 0;
+            margin: 0;
             background-color: #eee;
             color: #bbb;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            transform: translateX(-50%) translateY(-50%);
         }
 
         a {
@@ -41,7 +49,7 @@
             transform: scale(2);
         }
 
-        links {
+        .links {
             position: relative;
             top: 10px;
         }
@@ -335,19 +343,21 @@
 </head>
 
 <body>
-    <h1>
-        <span class="animation-target G">G</span><span class="animation-target2 U1">U</span><span class="animation-target U2">U</span><span class="animation-target2 P">P</span><span class="animation-target A">A</span>
-    </h1>
-    <links>
-        <a class="footer" href="https://medium.com/@l.mugnaini">Medium</a> &#183;
-        <a class="footer" href="https://codepen.io/lucamug/">Codepen</a> &#183;
-        <a class="footer" href="https://github.com/lucamug/">Github</a> &#183;
-        <a class="footer" href="https://stackoverflow.com/users/693271/luke">Stackoverflow</a> &#183;
-        <a class="footer" href="http://guupa.com/portfolio/">Portfolio</a>
-    </links>
-    <p>
-        &copy; 2018 &#183; Luca Mugnaini &#183; All rights reserved &#183; luca.mugnaini.lm(at)gmail.com
-    </p>
+    <div class="container">
+        <h1>
+                <span class="animation-target G">G</span><span class="animation-target2 U1">U</span><span class="animation-target U2">U</span><span class="animation-target2 P">P</span><span class="animation-target A">A</span>
+            </h1>
+        <div class="links">
+            <a class="footer" href="https://medium.com/@l.mugnaini">Medium</a> &#183;
+            <a class="footer" href="https://codepen.io/lucamug/">Codepen</a> &#183;
+            <a class="footer" href="https://github.com/lucamug/">Github</a> &#183;
+            <a class="footer" href="https://stackoverflow.com/users/693271/luke">Stackoverflow</a> &#183;
+            <a class="footer" href="http://guupa.com/portfolio/">Portfolio</a>
+        </div>
+        <p>
+            &copy; 2018 &#183; Luca Mugnaini &#183; All rights reserved &#183; luca.mugnaini.lm(at)gmail.com
+        </p>
+    </div>
     <script>
         var list = document.getElementsByTagName("span");
         for (var i = 0; i < list.length; i++) {
@@ -357,11 +367,10 @@
                     e.target.className = e.target.className.replace(/still/, "animation-target");
                 }, 100);
 
-            }); //second console output
+            });
         }
     </script>
 </body>
 
-</html>
 
 </html>
